@@ -1,0 +1,72 @@
+<html>
+<body>
+
+<h1>One Click Application</h1>
+
+<hr />
+<h2>Password Generator</h2>
+  <form method="post" action="./">
+
+    <ul>
+      <li>Length:&nbsp;
+        <select name="length">
+	  <option value="4">4</option>
+	  <option value="5">5</option>
+	  <option value="6">6</option>
+	  <option value="7">7</option>
+	  <option value="8">8</option>
+	  <option value="9">9</option>
+	  <option value="10">10</option>
+	  <option value="11">11</option>
+	  <option value="12">12</option>
+	</select>
+      </li>
+      
+      <li>
+        <input type="checkbox" name="lcase" value="on" checked />Lowercase
+      </li>
+      <li>
+        <input type="checkbox" name="ucase" value="on" />Uppercase
+      </li> 
+      <li>
+        <input type="checkbox" name="digit" value="on" />Digit
+      </li>
+      <li>
+        <input type="checkbox" name="symbol" value="on"/>Symbol
+      </li>
+    </ul>
+
+    <input type="submit" name="generate_password" value="Generate" />
+
+    {% if password %}
+        <br /><br />
+        <input type="text" value="{{ password }}">
+    {% endif %}
+
+  <hr />
+ 
+  <h2>Translate Hiragana into Roman Alphabet (Hepburn System)</h2>
+    <table>
+    <tr>
+      <td>Hiragana/Katakana</td>
+      <td>&nbsp;</td>
+      <td>Roma-ji</td>
+    </tr>
+    <tr>
+      <td>
+        <textarea name='kana'>{{ kana }}</textarea>
+      </td>
+      <td>
+          <input type='submit' value="To Roman Alphabet" />
+      </td>
+
+      <td>
+        <textarea name='roman'>{{ roman }}</textarea>
+      </td>
+    </tr>
+    </table>
+
+    </form>
+
+</body>
+</html>

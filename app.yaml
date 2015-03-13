@@ -1,0 +1,17 @@
+application: appsclicker
+version: 4
+runtime: python
+api_version: 1
+
+handlers:
+- url: /stylesheets
+  static_dir: stylesheets
+
+- url: /js
+  static_dir: js
+
+- url: /imgs
+  static_dir: imgs
+
+- url: /.*
+  script: appsclicker.py
